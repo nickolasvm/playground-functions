@@ -37,9 +37,18 @@ function footballPoints(wins, ties) {
 }
 console.log(footballPoints(3, 1))
 
-// Desafio 6 - TODO
-function highestCount() {
+// Desafio 6
+function highestCount(numArray) {
   // seu código aqui
+  let result = 0;
+  let highestNum = numArray.sort()[numArray.length - 1]
+  for (let i = 0; i < numArray.length; i += 1) {
+    if (numArray[i] === highestNum) {
+      result += 1;
+    }
+  }
+  
+  return result;
 }
 
 // Desafio 7 - TODO
