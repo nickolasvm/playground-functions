@@ -118,9 +118,24 @@ function decode(fraseCodificada) {
   return letrasArray.join().replace(/,/g,'');
 }
 
-// Desafio 10 - TODO
-function techList() {
+// Desafio 10
+function techList(techNames, personName) {
   // seu código aqui
+  if (techNames.length === 0) {
+    return 'Vazio!';
+  }
+
+  let result = []
+  techNames = techNames.sort();
+
+  for (let i = 0; i < techNames.length; i += 1) {
+    let resultItem = {};
+    resultItem.tech = techNames[i];
+    resultItem.name = personName;
+    result.push(resultItem);
+  }
+
+  return result;
 }
 
 module.exports = {
