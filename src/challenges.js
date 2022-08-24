@@ -35,23 +35,24 @@ function footballPoints(wins, ties) {
   wins *= 3;
   return wins + ties;
 }
-console.log(footballPoints(3, 1))
 
-// Desafio 6
+// Desafio 6 - TODO ajustar com resutado -1
+// let teste = [-2, -1, -2]
 function highestCount(numArray) {
   // seu código aqui
   let result = 0;
-  let highestNum = numArray.sort()[numArray.length - 1]
+  let highestNum = numArray.sort()[numArray.length - 1];
   for (let i = 0; i < numArray.length; i += 1) {
     if (numArray[i] === highestNum) {
       result += 1;
     }
   }
-  
-  return result;
-}
 
-// Desafio 7 - TODO
+  return numArray.sort()[numArray.length - 1];
+}
+// console.log(highestCount(teste))
+
+// Desafio 7 - TODO fazer desde inicio
 function catAndMouse() {
   // seu código aqui
 }
@@ -82,20 +83,20 @@ function encode(frase) {
 
   for (let i = 0; i < letrasArray.length; i += 1) {
     switch (letrasArray[i]) {
-    case 'a':
-      letrasArray[i] = '1';
-      break;
-    case 'e':
-      letrasArray[i] = '2';
-      break;
-    case 'i':
-      letrasArray[i] = '3';
-      break;
-    case 'o':
-      letrasArray[i] = '4';
-      break;
-    case 'u':
-      letrasArray[i] = '5';
+      case 'a':
+        letrasArray[i] = '1';
+        break;
+      case 'e':
+        letrasArray[i] = '2';
+        break;
+      case 'i':
+        letrasArray[i] = '3';
+        break;
+      case 'o':
+        letrasArray[i] = '4';
+        break;
+      case 'u':
+        letrasArray[i] = '5';
     }
   }
 
@@ -108,20 +109,20 @@ function decode(fraseCodificada) {
 
   for (let i = 0; i < letrasArray.length; i += 1) {
     switch (letrasArray[i]) {
-    case '1':
-      letrasArray[i] = 'a';
-      break;
-    case '2':
-      letrasArray[i] = 'e';
-      break;
-    case '3':
-      letrasArray[i] = 'i';
-      break;
-    case '4':
-      letrasArray[i] = 'o';
-      break;
-    case '5':
-      letrasArray[i] = 'u';
+      case '1':
+        letrasArray[i] = 'a';
+        break;
+      case '2':
+        letrasArray[i] = 'e';
+        break;
+      case '3':
+        letrasArray[i] = 'i';
+        break;
+      case '4':
+        letrasArray[i] = 'o';
+        break;
+      case '5':
+        letrasArray[i] = 'u';
     }
   }
 
@@ -139,7 +140,7 @@ function techList(techNames, personName) {
   techNames = techNames.sort();
 
   for (let i = 0; i < techNames.length; i += 1) {
-    let resultItem = {tech: techNames[i], name: personName};
+    let resultItem = { tech: techNames[i], name: personName };
     result.push(resultItem);
   }
 
