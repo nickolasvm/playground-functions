@@ -16,7 +16,7 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(sentence) {
   // seu código aqui
-  let array = sentence.split(" ");
+  let array = sentence.split(' ');
   return array;
 }
 
@@ -50,24 +50,48 @@ function catAndMouse() {
 function fizzBuzz(numArray) {
   // seu código aqui
   let stgArray = [];
-  for (i = 0; i < numArray.length; i += 1) {
-    if (numArray[i] % 3 === 0 &&  numArray[i] % 5 === 0) {
-      stgArray.push('fizzBuzz')
+  for (let i = 0; i < numArray.length; i += 1) {
+    if (numArray[i] % 3 === 0 && numArray[i] % 5 === 0) {
+      stgArray.push('fizzBuzz');
     } else if (numArray[i] % 5 === 0) {
-      stgArray.push('buzz')
+      stgArray.push('buzz');
     } else if (numArray[i] % 3 === 0) {
-      stgArray.push('fizz')
+      stgArray.push('fizz');
     } else {
-      stgArray.push('bug!')
+      stgArray.push('bug!');
     }
   }
   return stgArray;
 }
 
 // Desafio 9
-function encode() {
+function encode(frase) {
   // seu código aqui
+  let letrasArray = [];
+  letrasArray = frase.split('')
+
+  for (let i = 0; i < letrasArray.length; i += 1) {
+    switch (letrasArray[i]) {
+      case 'a':
+        letrasArray[i] = '1';
+        break;
+      case 'e':
+        letrasArray[i] = '2';
+        break;
+      case 'i':
+        letrasArray[i] = '3';
+        break;
+      case 'o':
+        letrasArray[i] = '4';
+        break;
+      case 'u':
+        letrasArray[i] = '5';
+    }
+  }
+
+  return letrasArray.join().replace(/,/g,'');
 }
+
 function decode() {
   // seu código aqui
 }
