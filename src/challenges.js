@@ -36,12 +36,12 @@ function footballPoints(wins, ties) {
   return wins + ties;
 }
 
-// Desafio 6
+// Desafio 6 - TODO
 function highestCount() {
   // seu código aqui
 }
 
-// Desafio 7
+// Desafio 7 - TODO
 function catAndMouse() {
   // seu código aqui
 }
@@ -91,12 +91,34 @@ function encode(frase) {
 
   return letrasArray.join().replace(/,/g,'');
 }
-
-function decode() {
+function decode(fraseCodificada) {
   // seu código aqui
+  let letrasArray = [];
+  letrasArray = fraseCodificada.split('')
+
+  for (let i = 0; i < letrasArray.length; i += 1) {
+    switch (letrasArray[i]) {
+      case '1':
+        letrasArray[i] = 'a';
+        break;
+      case '2':
+        letrasArray[i] = 'e';
+        break;
+      case '3':
+        letrasArray[i] = 'i';
+        break;
+      case '4':
+        letrasArray[i] = 'o';
+        break;
+      case '5':
+        letrasArray[i] = 'u';
+    }
+  }
+
+  return letrasArray.join().replace(/,/g,'');
 }
 
-// Desafio 10
+// Desafio 10 - TODO
 function techList() {
   // seu código aqui
 }
