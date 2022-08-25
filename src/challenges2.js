@@ -54,9 +54,29 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(drinks) {
   // seu código aqui
+  /*
+    . variavel regex -- regular expression
+    . a expressão /\d+/g significa 'um ou mais digitos'
+    . utilizar string.match(regex) retorna um objeto com os números
+    . esse objeto contendo os números virão em formato string
+  */
+  let regex = /\d+/g;
+  let drinksQuanti = drinks.match(regex);
+  let cupsOfWater = 0;
+
+  for (i = 0; i < drinksQuanti.length; i += 1) {
+    cupsOfWater += parseInt(drinksQuanti[i]);
+  }
+  
+  if (cupsOfWater > 1) {
+    return cupsOfWater + ' copos de água';
+  }
+
+  return cupsOfWater + ' copo de água';
 }
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'))
 
 module.exports = {
   generatePhoneNumber,
