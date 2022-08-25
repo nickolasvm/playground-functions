@@ -37,20 +37,18 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6 - TODO ajustar com resutado -1
-// let teste = [-2, -1, -2]
 function highestCount(numArray) {
   // seu código aqui
   let result = 0;
-  let highestNum = numArray.sort()[numArray.length - 1];
+  let highestNum = Math.max(...numArray);
   for (let i = 0; i < numArray.length; i += 1) {
     if (numArray[i] === highestNum) {
       result += 1;
     }
   }
 
-  return numArray.sort()[numArray.length - 1];
+  return result;
 }
-// console.log(highestCount(teste))
 
 // Desafio 7 - TODO fazer desde inicio
 function catAndMouse() {
