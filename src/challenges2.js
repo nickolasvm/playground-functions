@@ -14,7 +14,7 @@ function generatePhoneNumber(telNum) {
     }
 
     // faz um loop nos elementos 1 casa depois do atual, para checagem de duplicados
-    for (j = i + 1; j < telNum.length; j += 1) {
+    for (let j = i + 1; j < telNum.length; j += 1) {
       if (telNum[i] === telNum[j]) {
         contador += 1;
       }
@@ -31,10 +31,9 @@ function generatePhoneNumber(telNum) {
     resultado = resultado.concat(telNum[i]);
   }
 
-  resultado = '(' + resultado.slice(0, 2) 
-    + ') ' + resultado.slice(2, 7) 
-    + '-' + resultado.slice(7, 11)
-  ;
+  resultado = `(${resultado.slice(0, 2)
+  }) ${resultado.slice(2, 7)
+  }-${resultado.slice(7, 11)}`;
 
   return resultado;
 }
@@ -54,8 +53,25 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(drinks) {
   // seu código aqui
+  /*
+    . variavel regex -- regular expression
+    . a expressão /\d+/g significa 'um ou mais digitos'
+    . utilizar string.match(regex) retorna um objeto com os números
+    . esse objeto contendo os números virão em formato string
+  */
+  let regex = /\d+/g;
+  let drinksQuanti = drinks.match(regex);
+  let cupsOfWater = 0;
+
+  for (let i = 0; i < drinksQuanti.length; i += 1) {
+    cupsOfWater += Number(drinksQuanti[i]);
+  }
+  if (cupsOfWater > 1) {
+    return `${cupsOfWater} copos de água`;
+  }
+  return `${cupsOfWater} copo de água`;
 }
 
 module.exports = {

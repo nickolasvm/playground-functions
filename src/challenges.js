@@ -55,17 +55,16 @@ function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let pstnCat1 = mouse - cat1;
   let pstnCat2 = mouse - cat2;
-
   if (pstnCat1 < 0) {
     pstnCat1 *= -1;
   }
   if (pstnCat2 < 0) {
     pstnCat2 *= -1;
   }
-
   if (pstnCat1 === pstnCat2) {
     return 'os gatos trombam e o rato foge';
-  } else if (pstnCat1 > pstnCat2) {
+  }
+  if (pstnCat1 > pstnCat2) {
     return 'cat2';
   }
   return 'cat1';
@@ -97,20 +96,20 @@ function encode(frase) {
 
   for (let i = 0; i < letrasArray.length; i += 1) {
     switch (letrasArray[i]) {
-      case 'a':
-        letrasArray[i] = '1';
-        break;
-      case 'e':
-        letrasArray[i] = '2';
-        break;
-      case 'i':
-        letrasArray[i] = '3';
-        break;
-      case 'o':
-        letrasArray[i] = '4';
-        break;
-      case 'u':
-        letrasArray[i] = '5';
+    case 'a':
+      letrasArray[i] = '1';
+      break;
+    case 'e':
+      letrasArray[i] = '2';
+      break;
+    case 'i':
+      letrasArray[i] = '3';
+      break;
+    case 'o':
+      letrasArray[i] = '4';
+      break;
+    case 'u':
+      letrasArray[i] = '5';
     }
   }
 
@@ -123,20 +122,20 @@ function decode(fraseCodificada) {
 
   for (let i = 0; i < letrasArray.length; i += 1) {
     switch (letrasArray[i]) {
-      case '1':
-        letrasArray[i] = 'a';
-        break;
-      case '2':
-        letrasArray[i] = 'e';
-        break;
-      case '3':
-        letrasArray[i] = 'i';
-        break;
-      case '4':
-        letrasArray[i] = 'o';
-        break;
-      case '5':
-        letrasArray[i] = 'u';
+    case '1':
+      letrasArray[i] = 'a';
+      break;
+    case '2':
+      letrasArray[i] = 'e';
+      break;
+    case '3':
+      letrasArray[i] = 'i';
+      break;
+    case '4':
+      letrasArray[i] = 'o';
+      break;
+    case '5':
+      letrasArray[i] = 'u';
     }
   }
 
