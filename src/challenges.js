@@ -36,7 +36,7 @@ function footballPoints(wins, ties) {
   return wins + ties;
 }
 
-// Desafio 6 - TODO ajustar com resutado -1
+// Desafio 6
 function highestCount(numArray) {
   // seu código aqui
   let result = 0;
@@ -51,8 +51,24 @@ function highestCount(numArray) {
 }
 
 // Desafio 7 - TODO fazer desde inicio
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  let pstnCat1 = mouse - cat1;
+  let pstnCat2 = mouse - cat2;
+
+  if (pstnCat1 < 0) {
+    pstnCat1 *= -1;
+  }
+  if (pstnCat2 < 0) {
+    pstnCat2 *= -1;
+  }
+
+  if (pstnCat1 === pstnCat2) {
+    return 'os gatos trombam e o rato foge';
+  } else if (pstnCat1 > pstnCat2) {
+    return 'cat2';
+  }
+  return 'cat1';
 }
 
 // Desafio 8
