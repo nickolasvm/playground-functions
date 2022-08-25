@@ -40,8 +40,17 @@ function generatePhoneNumber(telNum) {
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  if (lineA > (lineB + lineC) || lineB > (lineA + lineC) || lineC > (lineB + lineA)) {
+    return false;
+  }
+
+  if (lineA < Math.abs(lineB - lineC) || lineB < Math.abs(lineA - lineC) || lineC < Math.abs(lineB - lineA)) {
+    return false;
+  }
+
+  return true;
 }
 
 // Desafio 13
